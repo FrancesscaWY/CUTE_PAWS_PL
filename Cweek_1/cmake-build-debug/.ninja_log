@@ -1,0 +1,5 @@
+# ninja log v5
+2	588	7308944215937416	CMakeFiles/week1.dir/main.cpp.obj	5a3e8bda93078bb1
+303	415	7308315007427972	week1.exe	139818d6ed4acfd8
+0	139	7314293810641167	build.ninja	9a5ac5167f6f838b
+2	303	7308315006349963	CMakeFiles/week1.dir/friends.cpp.obj	2a9fc01c54cac397

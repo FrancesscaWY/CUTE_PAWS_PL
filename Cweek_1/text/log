@@ -1,0 +1,11 @@
+2/28
+::作用域运算符 1>调用全局变量 2>类之外定义函数 3>定义/访问静态变量
+public:类内、外均可访问 protected:类内、派生类可访问 private:类内可访问
+public 的继承类可以访问基类的 public、protected 成员，（类内可访问protected、用户不可）派生类还是原类属性
+protected 的继承类可以访问基类的 protected 成员 派生类分别为protected、private
+private 的继承类不能访问基类的成员（任何位置都不可访问）派分类别为private
+
+友元函数：可以访问类的私有成员
+全局函数、做为友元函数
+2/29
+building=new Building 什么意思;new Building 会返回一个指向Building的指针

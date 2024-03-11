@@ -1,0 +1,14 @@
+# ninja log v5
+254	542	7317764413655358	week2.exe	72dc4eeafedd9383
+3	494	7317808654939158	CMakeFiles/thread_local.dir/thread_local.cpp.obj	76b4e61bfa3cb656
+3	751	7317739065956165	CMakeFiles/week2.dir/mutable.cpp.obj	4e441cd20e4a2290
+1	213	7317813291813738	build.ninja	9688ba3dccc20fcc
+2	835	7317757291996608	CMakeFiles/week2.dir/extern_us.cpp.obj	eb41a51a2c8c6788
+3	254	7317764410870419	CMakeFiles/week2.dir/extern_ori.cpp.obj	c0a37bccbbf28fc3
+0	612	7317797743874608	CMakeFiles/new_target.dir/Scope_re.cpp.obj	28653826d209fd8d
+612	1112	7317797748719420	new_target.exe	5771d0370d13304f
+495	909	7317808658963042	thread_local.exe	7290e4bba280e3fa
+1	534	7317815541232154	CMakeFiles/operator.dir/operator.cpp.obj	c72a369c7b422bf3
+535	1088	7317815546574256	operator.exe	493ee67ab596bb5d
+5	481	7317815625793432	CMakeFiles/operator.dir/operator.cpp.obj	c72a369c7b422bf3
+482	1012	7317815630971234	operator.exe	493ee67ab596bb5d
