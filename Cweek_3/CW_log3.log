@@ -1,0 +1,32 @@
+>>1 逗号运算符 其表达式返回值为最后一个表达式的值
+>>2 类型转换符
+    static_cast<type>(expr)  不能改变const、volatile、__unaligned属性 不安全
+    const_cast<type>(expr)   只能改变const、volatile属性 不安全
+    dynamic_cast<type>(expr) 用于类层次间的上行（子到父）、下行（父到子）转换，只能用于多态类型 相对安全
+    reinterpret_cast<type>(expr) 重新解释类型 不安全
+>>3 typeid(expr).name() 返回expr的类型名
+>>4 函数调用类型
+    传值调用
+    引用调用
+    指针调用
+>>5 lambda function
+    ①[capture](parameters) -> return_type {body}
+    capture: [] 不捕获任何变量 [=] 捕获所有变量 [&] 捕获所有变量并按引用捕获
+    parameters: 形参列表
+    return_type: 返回类型
+    body: 函数体
+    其中capture、parameters、return_type可以省略
+    ②捕获列表:
+            [] 不捕获任何变量
+            [&] 捕获外部作用域中所有变量，并作为引用在函数体中使用
+            [=] 捕获外部作用域中所有变量，并在函数体中作为副本使用
+            [=,&foo] 捕获foo变量并作为引用，其余变量作为副本
+            [bar] 捕获bar变量并作为副本，其余变量不捕获
+            [this] 捕获当前对象（类）的this指针，让lambda表达式拥有和当前对象相同的生命周期
+                   获当前类中的 this 指针,让 lambda 表达式拥有和当前类成员函数同样的访问权限,如果已经使用了 & 或者 =, 默认添加此选项
+    ③mutable: 默认情况下，lambda函数总是一个const函数，mutable可以取消其常量性，修改按值捕获的变量
+    ④lambda表达式的类型在C++11中会被看做是一个带operator()的类，即仿函数。
+      按照C++标准，lambda表达式的operator()默认是const的，一个const成员函数是无法修改成员变量值的。
+    ⑤mutable 选项的作用就在于取消 operator () 的 const 属性
+    ⑥lambda 表达式在 C++ 中会被看做是一个仿函数,可通过是std::function和std::bind来使用
+    ⑦auto关键字可以自动推导出lambda表达式的类型
