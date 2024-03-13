@@ -30,3 +30,4 @@
     ⑤mutable 选项的作用就在于取消 operator () 的 const 属性
     ⑥lambda 表达式在 C++ 中会被看做是一个仿函数,可通过是std::function和std::bind来使用
     ⑦auto关键字可以自动推导出lambda表达式的类型
+>>6 有关数的函数参考num_tr.cpp 理解，注意头文件的引用;随机函数基本用法参考s__rand.cpp 理解
