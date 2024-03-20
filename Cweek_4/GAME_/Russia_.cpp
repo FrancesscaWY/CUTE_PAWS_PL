@@ -15,7 +15,7 @@ std::chrono::milliseconds operator""ms(unsigned long long milliseconds)
 
 wstring tetromino[7]; //长度为7的字符串数组, 保存7种方块
 int nFieldWidth = 12;
-int nFieldHeight = 18;
+int nFieldHeight = 15;
 unsigned char *pField = nullptr; //动态分配内存
 
 int nScreenWidth = 80; //Console Screen Size X (columns)
@@ -137,10 +137,10 @@ int main()
     int nSpeedCounter = 0;
     bool bForceDown  = false;
 
-    int nPieceCount = 0; // 难度设置
+    int nPieceCount = -1; // 难度设置
     int nScore = 0; //分数
 
-    vector<int> vLines;
+    vector<int> vLines;//保存消除的行
 
     while(!bGameOver)
     {
@@ -183,7 +183,7 @@ int main()
                             pField[(nCurrentY + py) * nFieldWidth + (nCurrentX + px)] = nCurrentPiece + 1;
 
                 nPieceCount++;
-                if (nPieceCount % 10 == 0)
+                if (nPieceCount % 10 == 0)//每下降10个方块, 速度加快
                     if (nSpeed >= 10) nSpeed--; //nSpeed越小, 下落速度越快
 
                 // check have we have got any lines
@@ -261,7 +261,6 @@ int main()
     CloseHandle(hConsole);
     cout<< "Game Over!! Score:"<< nScore << endl;
     system("pause");
-
     return 0;
 }
 // Created by 86138 on 2024/3/19.
