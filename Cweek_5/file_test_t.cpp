@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <string>
 using namespace std;
 int main(){
     fstream file;
@@ -9,14 +10,19 @@ int main(){
         cout << "fail to open " << endl;
         return -1;
     }
-    char text[50];
-    for(int i=0;i<50;i++){
-        cin >> text[i];
-        file << text[i];
-        if(i==49){
-            cout << endl;
-        }
-    }
+//    char text[50];
+//    for(int i=0;i<50;i++){
+//        cin >> text[i];
+//        file << text[i];
+//        if(i==49){
+//            cout << endl;
+//        }
+//    }
+
+    string box;
+    getline(cin,box);
+//    file.write((char *)&box,sizeof(box));
+    file << box << endl;
     cout << endl;
 //如何从终端读取空格，如何将string输出
 
