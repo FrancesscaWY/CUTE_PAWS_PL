@@ -10,18 +10,11 @@ int main() {
         return -1;
     }
 
-    string article[10000];
-    for(int i=0;i<10000;i++){
-    cin >> article[i];
-    cout << article[i] << " ";}
+    string article;
+    cin >> article;
     cin.ignore();
-    cout << article << endl;
 
-
-//    for(int i=0;i<article.size();i++){
-//        file << article[i] << endl;
-//    }
-
+    file << article << endl;
 
     file.seekg(0, ios::beg);
 
