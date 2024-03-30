@@ -12,4 +12,8 @@
                 #include <string>
                     string text;
                     getline(cin,text);
+7>> using namespace space1 :: space2_in_space1
+    命名空间定义可以是定义一个新的命名空间，也可以是为已有的命名空间增加新的元素：
+8>> # 运算符会把 replacement-text 令牌转换为用引号引起来的字符串
+    ## 运算符用于连接两个令牌
 
