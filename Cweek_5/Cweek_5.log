@@ -17,3 +17,14 @@
 8>> # 运算符会把 replacement-text 令牌转换为用引号引起来的字符串
     ## 运算符用于连接两个令牌
 
+9>> signal handle
+    SIGABRT 程序的异常终止，如调用 abort
+    SIGFPE 错误的算术运算，比如除以零或导致溢出的操作
+    SIGILL 检测非法指令
+    SIGINT 接收到交互注意信号 CTRL+C
+    SIGSEGV 非法访问内存
+    SIGTERM 发送到程序的终止请求
+
+10>> multi_threads
+     creating a thread:
+     pthread_create(&thread(num), NULL(original parameters of func ), function, NULL（incoming parameters）);
