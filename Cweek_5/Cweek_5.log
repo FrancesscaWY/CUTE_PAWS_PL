@@ -28,3 +28,6 @@
 10>> multi_threads
      creating a thread:
      pthread_create(&thread(num), NULL(original parameters of func ), function, NULL（incoming parameters）);
+11>> pthread_join (threadId, status)//pthread_join() 子程序阻碍调用程序，直到指定的 threadid 线程终止为止
+             当创建一个线程时，它的某个属性会定义它是否是可连接的（joinable）或可分离的（detached）,默认是可连接的
+     pthread_detach (threadId) //pthread_detach() 函数允许一个线程在它终止时，自行清除它的资源
