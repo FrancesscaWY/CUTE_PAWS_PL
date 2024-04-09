@@ -1,0 +1,10 @@
+1>> setw(int) 设置域宽 对后面的输出有效
+2>> setfill(char) 设置填充字符 对后面的输出有效
+3>> setprecision(int) 设置有效数字位数 对后面的输出有效
+4>> ws >> ws 用于跳过空白字符
+5>> ends 用于在字符串后面加上空字符
+6>> cin.getline(char*,int,'\0') 用法:接收一个字符串，可以接收空格并输出
+    1、cin.getline()实际上有三个参数，cin.getline(接收字符串的变量,接收字符个数,结束字符)
+    2、当第三个参数省略时，系统默认为'\0'
+7>> getline(cin,str)
+    用法：接收一个字符串，可以接收空格并输出，需包含“#include<string>”
