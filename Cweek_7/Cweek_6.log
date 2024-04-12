@@ -8,3 +8,6 @@
     2、当第三个参数省略时，系统默认为'\0'
 7>> getline(cin,str)
     用法：接收一个字符串，可以接收空格并输出，需包含“#include<string>”
+8>> memset(char*,char,int) #include <string.h> 用法：将字符串前n个字符替换为指定字符
+    memset(int*,int,int)  If you want to give the correct value ,the int must be 0 or -1,because only the -1 or
+    0 can be the same number after it convert to binary.
