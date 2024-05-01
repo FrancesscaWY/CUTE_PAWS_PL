@@ -1,0 +1,2 @@
+1>> int length=str.size(); or int length=str.length(); //both are same
+    return the length of the string,not include the null character '\0'
