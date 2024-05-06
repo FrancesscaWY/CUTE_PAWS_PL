@@ -44,7 +44,7 @@ int main() {
     A.Display();
     cout << endl;
     A.setInformation("Tom", "清源路19号","北京","100084");
-    cout << "调用setInformation函数设置Employee类的对象A的信息"<<endl;
+    cout << "调用setInformation函数修改Employee类的对象A的信息"<<endl;
     A.Display();
     cout << endl;
     cout << "调用setInformation函数改变对象A的Name属性，其他属性保持不变"<<endl;
@@ -55,7 +55,7 @@ int main() {
     B.Display();
     cout << endl;
     B.setInformation("Alice", "","北京","");
-    cout << "调用setInformation函数设置Employee类的对象B的Name属性和City属性"<<endl;
+    cout << "调用setInformation函数修改Employee类的对象B的Name属性和City属性"<<endl;
     B.Display();
     cout << endl;
     cout << "调用setInformation函数赋值对象B的Postal_code属性，其他属性保持不变"<<endl;
