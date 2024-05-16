@@ -43,6 +43,8 @@ private:
     int size;
 };
 int main(){
+    char* charPtr = "Hello";//char*是什么？，char*是指向字符的指针
+
     cout << "Step one:" << endl;
     Point *ptr1=new Point;
     delete ptr1;
