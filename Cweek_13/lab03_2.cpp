@@ -4,14 +4,13 @@ using namespace std;
 template <class T>
 class Vector{
 public:
-
     T add(T data){
         if(size==capacity){
             //如果数组已满,则扩容
             capacity=capacity*2;
             T* new_arr=new T[capacity];//创建一个新的数组的指针，指向一个新的数组，新数组的大小是原数组的两倍
             for(size_t i=0;i<size;i++){
-                new_arr[i]=arr[i];//将原数组的元素复制到新数组中，这样就完成了数组的扩容
+                new_arr[i]=arr[i];//n将原数组的元素复制到新数组中，这样就完成了数组的扩容
             }
             delete[] arr;//删除原数组的指针，释放原数组的内存，但是原数组的内容还在
             //为什么要删除原数组，因为原数组的内存空间不够用了，所以要重新分配内存空间
@@ -45,7 +44,7 @@ public:
         return arr[index];
     }
 private:
-    T* arr;
+    T* arr;//arr用于存储元素，是一个指针，指向一个数组，数组的类型是T，T是一个模板类型，可以是任意类型，比如int，double，string等
     size_t size=0;//size_t是一个无符号整数类型,用来表示数组的大小
     size_t capacity=1;//size_t是一个无符号整数类型,用来表示数组的容量
 };
@@ -71,4 +70,5 @@ int main()
     cout << vv[vv.get_size()-1] << endl;
     vv.add(m);
     cout << vint.get_size() << endl;
+    return 0;
 }

@@ -13,12 +13,15 @@ int main() {
     cout << "The output after calling delete function: " << endl;
     stringSet1.deleteStr("Java");
     stringSet1.display();
+    cout << "The output after calling Add_Str function: " << endl;
+    stringSet1.Add_Str("hello");
+    stringSet1.display();
     cout << "The output after calling clearAll function: "<<endl;
     stringSet2.clearAll();
     stringSet2.display();
-    cout << "The output after calling overload '+' : " << endl;
-    ss4.display();
     cout << "The output after calling overload '*' : " << endl;
+    ss4.display();
+    cout << "The output after calling overload '+' : " << endl;
     ss3.display();
     return 0;
 }
