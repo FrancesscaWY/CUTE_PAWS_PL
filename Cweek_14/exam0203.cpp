@@ -1,76 +1,71 @@
 #include <iostream>
 using namespace std;
-
 class Node{
 public:
     int data;
-    Node* next;
-    Node(int intdata):data(intdata),next(NULL){}
+    Node * next;
+    Node(int intData):data(intData),next(NULL){ }
 };
-
-class IntQueue{
+class intQueue{
+public:
+    intQueue():head(NULL),tail(NULL){}
+    bool isEmpty( ) const{return head==NULL;}
+    void enQueue(int intData);
+    bool dequeue(int &intData);
+    void show(ostream &os=cout)const;
+private:
     Node *head;
     Node *tail;
-public:
-    IntQueue():head(NULL),tail(NULL){}
-    bool isEmpty()const{ return head==NULL; }
-    void enqueue(int intdata);
-    bool dequeue(int& intdata);
-    void show(ostream& os=cout)const;
 };
-
-void IntQueue::enqueue(int intdata){
-    if(isEmpty())
-        head=tail=new Node(intdata);
-    else
-        tail=tail->next=new Node(intdata);
+void intQueue::enQueue(int intData){
+    if(isEmpty()){
+        head=tail=new Node(intData);
+        //改变指针的指向而不是赋值
+    }else{
+        tail=tail->next=new Node(intData);
+        //首先将尾指针对象的next指针成员指向新插入的数据，在将尾指针指向next指针
+    };
 }
-
-bool IntQueue::dequeue(int& intdata){
-    if(isEmpty()) return false;
-    intdata=head->data;
+bool intQueue::dequeue(int &intData){
+    if(isEmpty()){return false;}
+    intData=head->data;
     Node *p=head;
+        //声明p指针指向需要删除数据的物理位置
     head=head->next;
+        //让头指针指向头指针的下一个指针
     delete p;
-    return true;
+}
+void intQueue::show(ostream &os=cout){
+
 }
 
-void IntQueue::show(ostream& os) const {
-    //********333********    【20分】
-    Node *p=head;
-    while(p){
-        os<<p->data<<" ";
-        p=p->next;
-    }
 
 
 
 
 
 
-    //********666********
-    return;
-}
 
-int main(){
-    IntQueue que;
-    cout<<"刚建立时："; que.show();
-    que.enqueue(8);
-    que.enqueue(3);
-    cout<<"添加8，3后："; que.show();
-    que.enqueue(5);
-    cout<<"添加5后："; que.show();
-    int x;
-    que.dequeue(x);
-    cout<<"删除首元素"<<x<<"后：";que.show();
-    que.enqueue(-7);
-    cout<<"添加-7后："; que.show();
-    que.dequeue(x);
-    cout<<"删除首元素"<<x<<"后：";que.show();
 
-    return 0;
-}
 
-//
-// Created by 86138 on 2024/5/30.
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

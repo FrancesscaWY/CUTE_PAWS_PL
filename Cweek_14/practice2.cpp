@@ -5,8 +5,11 @@
 using namespace std;
 class Person{
 protected:
-    string m_name;
+    string m_nam;//protected成员变量
     int m_age;
 public:
-
+    Person(string name,int age){};
 };
+int main(){
+    Person p("Tom",32);
+}
