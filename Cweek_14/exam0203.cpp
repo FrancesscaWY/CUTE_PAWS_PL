@@ -35,10 +35,25 @@ bool intQueue::dequeue(int &intData){
         //让头指针指向头指针的下一个指针
     delete p;
 }
-void intQueue::show(ostream &os=cout){
-
+void intQueue::show(ostream &os=cout) const{
+    Node *p=head;
+    while(p){
+        os << p->data << " ";
+        p=p->next;
+    }
+    return;
 }
-
+int main(){
+    intQueue que;
+    cout << "刚建立时：";
+    que.show();
+    que.enQueue(8);
+    que.enQueue(3);
+    cout << "添加8和3以后：";
+    que.show();
+    que.enQueue(5);
+    
+}
 
 
 

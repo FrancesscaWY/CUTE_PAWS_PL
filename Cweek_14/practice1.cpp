@@ -64,9 +64,8 @@ void intQueue::show(ostream &os) const {
         //next为一个指向Node对象的指针，指向下一个Node对象
         //因此p指针指向下一个Node对象
     }
-    return;
+        return;
 }
-
 int main() {
     intQueue que;
     cout << "刚建立时：";
